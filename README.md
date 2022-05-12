@@ -4,7 +4,6 @@
 This case study is a capstone project for the completion of the Google Data Analytics Professional Certificate.
 
 <h3>Background</h3>
-![Cyclistic logo](https://i.imgur.com/XG5BVnO.png)
 Cyclistic is a fictional bike-share company located in Chicago, Illinois. Since its founding in 2016, Cyclistic has grown its fleet to 5,824 geotracked bicycles that dock into 692 Cyclistic stations across the city. Users can undock bikes from a station and return it to any other dock in the Cyclistic network anytime. 
 <br><br>
 Historically, Cyclistic's marketing strategy has relied on appealing to broad consumer segments with general awareness and flexibility in its pricing plans. Currently, users may choose to purchase single-ride passes, full-day passes, and annual memberships. For the purposes of this analysis, customers who purchase single-ride or full-day passes will be considered casual riders. Customers who purchase annual membership are Cyclistic members. 
