@@ -17,10 +17,10 @@ In order to do this, the marketing team first wants to understand how these diff
 3. How can Cyclistic use digital media to influence casual riders to become members?<br><br>
   
 <h2>Data</h2>
-Data for this case study is provided by Cyclistic for the purposes of determining how different customer types are using Cyclistic bikes. The team has provided one year of data between the months of April 2021 to March 2022
+Data for this case study is provided by Cyclistic for the purposes of determining how different customer types are using Cyclistic bikes. The team has provided one year of data between the months of April 2021 to March 2022 in .csv format. This data includes information about each individual bike ride including the ride ID, type of bike, start and end time, start and end station, and start and end longitude and lattitude, as well as the type of consumer (member or casual rider) renting the bike.
 
 <h3>Limitations</h3>
-One limitation to this case study is that user privacy prevents analysis of individual user data, including whether a user has purchased multiple single-use passes or whether they live locally to a Cyclistic station. 
+One limitation to this case study is that Cyclistic's user privacy policy prevents analysis of some individual user data, including whether a user has purchased multiple single-use passes or whether they live locally to a Cyclistic station. 
 
 <h3>Data Manipulation</h3>
 [data cleaning, etc]
