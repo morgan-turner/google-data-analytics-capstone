@@ -23,7 +23,7 @@ Data for this case study was collected internally by Cyclistic and provided to t
 One limitation to this case study is that Cyclistic's user privacy policy prevents analysis of some individual user data, including whether a user has purchased multiple single-use passes or whether they live locally to a Cyclistic station. 
 
 <h3>Data Preparation</h3>
-The data was loaded into RStudio and examined for nulls and duplicates, which were dropped from the dataset. This dataset is well over 5 million rows, so statistical analysis is not affected by the removal of these data points.
+The data was loaded into RStudio and examined with the tidyverse package in R for nulls and duplicates, which were dropped from the dataset. This dataset is well over 5 million rows, so statistical analysis is not affected by the removal of these data points.
 
 <h2>Analysis</h2>
 [summary of analysis]
