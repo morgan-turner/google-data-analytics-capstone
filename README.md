@@ -17,13 +17,13 @@ In order to do this, the marketing team first wants to understand how these diff
 3. How can Cyclistic use digital media to influence casual riders to become members?<br><br>
   
 <h2>Data</h2>
-Data for this case study is provided by Cyclistic for the purposes of determining how different customer types are using Cyclistic bikes. The team has provided one year of data between the months of April 2021 to March 2022 in .csv format. This data includes information about each individual bike ride including the ride ID, type of bike, start and end time, start and end station, and start and end longitude and lattitude, as well as the type of consumer (member or casual rider) renting the bike.
+Data for this case study was collected internally by Cyclistic and provided to the marketing team for the purposes of determining how different customer types are using Cyclistic bikes. The company has provided one year of data between the months of April 2021 to March 2022 in .csv format. This data includes information about each individual bike ride including the ride ID, type of bike, start and end time, start and end station, and start and end longitude and lattitude, as well as the type of consumer (member or casual rider) renting the bike.
 
 <h3>Limitations</h3>
 One limitation to this case study is that Cyclistic's user privacy policy prevents analysis of some individual user data, including whether a user has purchased multiple single-use passes or whether they live locally to a Cyclistic station. 
 
-<h3>Data Manipulation</h3>
-[data cleaning, etc]
+<h3>Data Preparation</h3>
+The data was loaded into RStudio and examined for nulls and duplicates, which were dropped from the dataset. This dataset is well over 5 million rows, so statistical analysis is not affected by the removal of these data points.
 
 <h2>Analysis</h2>
 [summary of analysis]
