@@ -12,9 +12,9 @@ Historically, Cyclistic's marketing strategy has relied on appealing to broad co
 The financial team at Cyclistic has recently concluded that annual members are far more profitable to the company than are casual riders. Subsequently, the marketing team has identified maximizing the number of annual memberships as a key goal for the company's success. They want to design a new marketing strategy to convert casual riders, who are already aware of the Cyclistic program and have chosen it at some point for their past transportation needs, into annual members. 
 <br><br>
 In order to do this, the marketing team first wants to understand how these different customer types are currently using Cyclistic bikes. They have identified the following questions to guide the future of their marketing program:<br><br>
-1. How do annual members and casual riders use Cyclistic differently?<br><br>
-2. Why would casual riders buy Cyclistic annual memberships?<br><br>
-3. How can Cyclistic use digital media to influence casual riders to become members?<br><br>
+<b>1. How do annual members and casual riders use Cyclistic differently?<br>
+2. Why would casual riders buy Cyclistic annual memberships?<br>
+3. How can Cyclistic use digital media to influence casual riders to become members?<br></b>
   
 <h2>Data</h2>
 Data for this case study was collected internally by Cyclistic and provided to the marketing team for the purposes of determining how different customer types are using Cyclistic bikes. The company has provided one year of data between the months of April 2021 and March 2022 in .csv format. This data includes information about each individual bike ride including the ride ID, type of bike, start and end time, start and end station, and start and end longitude and lattitude, as well as the type of consumer (member or casual rider) renting the bike.
