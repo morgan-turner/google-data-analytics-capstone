@@ -1,0 +1,9 @@
+# First, install tidyverse package and load relevant libraries
+
+install.packages("tidyverse")
+library(tidyverse)
+library(tidyr)
+library(readr)
+library(dplyr)
+library(ggplot2)
+
