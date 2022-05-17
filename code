@@ -1,0 +1,10 @@
+# For this project, I loaded data into RStudio in order to clean and analyze it using R.
+# First, I installed the tidyverse package and loaded relevant libraries:
+
+install.packages("tidyverse")
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+
+# Then, I loaded and aggregated the 12 separate .csv files so that these data were accessible and organized. 
+
