@@ -23,7 +23,7 @@ Data for this case study was collected internally by Cyclistic and provided to t
 One limitation to this case study is that Cyclistic's user privacy policy prevents analysis of some individual user data, including whether a user has purchased multiple single-use passes or whether they live locally to a Cyclistic station. The implications of this limitation are that Cyclistic cannot make recommendations for its marketing plan based on geographic or frequency of use data, nor send specific offers directly to consumers based on their consumer history with the company. Thus, the data team needs to work with a more general picture of useage trends of Cyclistic bikes across Chicago.
 
 <h3>Data Preparation</h3>
-The data was loaded into RStudio and examined with the tidyverse package in R for nulls and duplicates, which were dropped from the dataset. This dataset is well over 5 million rows, so statistical analysis is not affected by the removal of these data points.
+First, each .csv file was edited to calculate a field for ride length and day of week for each ride using Excel functions. Then, the files were loaded into RStudio and examined with the tidyverse package in R for nulls and duplicates, which were dropped from the dataset. This dataset is well over 5 million rows, so statistical analysis is not affected by the removal of these data points.
 
 <h2>Analysis</h2>
 [summary of analysis]
