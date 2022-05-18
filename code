@@ -7,4 +7,85 @@ library(lubridate)
 library(ggplot2)
 
 # Then, I loaded and aggregated the 12 separate .csv files so that these data were accessible and organized. 
+# First, uploading the files to RStudio using readr library...
+
+trips_2021_04 <- read_csv("202104-divvy-tripdata.csv")
+trips_2021_05 <- read_csv("202105-divvy-tripdata.csv")
+trips_2021_06 <- read_csv("202106-divvy-tripdata.csv")
+trips_2021_07 <- read_csv("202107-divvy-tripdata.csv")
+trips_2021_08 <- read_csv("202108-divvy-tripdata.csv")
+trips_2021_09 <- read_csv("202109-divvy-tripdata.csv")
+trips_2021_10 <- read_csv("202110-divvy-tripdata.csv")
+trips_2021_11 <- read_csv("202111-divvy-tripdata.csv")
+trips_2021_12 <- read_csv("202112-divvy-tripdata.csv")
+trips_2022_01 <- read_csv("202201-divvy-tripdata.csv")
+trips_2022_02 <- read_csv("202202-divvy-tripdata.csv")
+trips_2022_03 <- read_csv("202203-divvy-tripdata.csv")
+
+# Time to wrangle this data into a single file!
+# First, I compare column names to make sure everything will harmonize...
+
+colnames(trips_2021_04) 
+colnames(trips_2021_05)
+colnames(trips_2021_06)
+colnames(trips_2021_07)
+colnames(trips_2021_08)
+colnames(trips_2021_09)
+colnames(trips_2021_10)
+colnames(trips_2021_11)
+colnames(trips_2021_12)
+colnames(trips_2022_01)
+colnames(trips_2022_02)
+colnames(trips_2022_03)
+
+# Now to inspect the dataframes and look for inconsistencies...
+
+str(trips_2021_04) 
+str(trips_2021_05)
+str(trips_2021_06)
+str(trips_2021_07)
+str(trips_2021_08)
+str(trips_2021_09)
+str(trips_2021_10)
+str(trips_2021_11)
+str(trips_2021_12)
+str(trips_2022_01)
+str(trips_2022_02)
+str(trips_2022_03)
+
+# These files are formatted consistently already. No need to convert any data types, etc.
+# Now, I can stack all these dataframes into one big dataframe
+
+all_trips <- bind_rows(trips_2021_04, trips_2021_05, trips_2021_06, trips_2021_07, trips_2021_08, 
+trips_2021_09, trips_2021_10, trips_2021_11, trips_2021_12, trips_2022_01, trips_2022_02, trips_2022_03)
+
+# Let's remove fields we don't need. We won't be using locational data since it's not useful to our analysis, so we'll remove longitude and latitude.
+
+all_trips <- all_trips %>%  
+  select(-c(start_lat, start_lng, end_lat, end_lng))
+
+# Now we'll look at the new table and make sure it looks the way we expect it to...
+# Inspect column names:
+
+colnames(all_trips)  
+
+# Columns remaining are: ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, member_casual, ride_length, and day_of_week
+# How many rows are in this big data frame?
+
+nrow(all_trips)  
+
+# Wow! This dataframe has 5,723,532 rows. 
+# Quick check of the dataframe's dimensions? 
+
+dim(all_trips)  
+
+# As expected, we have 5,723,532 rows and 11 columns
+# Let's make sure the data types came out the way we expected them to: 
+
+str(all_trips) 
+summary(all_trips)
+
+# Now the data needs to be cleaned
+
+
 
