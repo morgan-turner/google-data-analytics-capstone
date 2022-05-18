@@ -24,7 +24,7 @@ One limitation to this case study is that Cyclistic's user privacy policy preven
 
 <h3>Data Preparation</h3>
 First, each .csv file was edited to calculate a field for ride length and day of week for each ride using Excel functions. Then, the files were loaded into RStudio, aggregated, and examined with the tidyverse package. Since locational data for individual users is unavailable for analysis, geographic data (latitude and longitude) is unnecessary; this was dropped from the dataset. Cyclistic often undocks its bikes for quality control or maintainance; to account for this, any rides less than 3 minutes in length were also dropped from the dataset.
-
+<br><br>
 Data was subsequently cleaned for nulls and duplicates, which were dropped from the dataset to avoid calculation errors during analysis. This dataset is well over 5 million rows, so removal of these few data points should not affect the outcome of the study.
 
 <h2>Analysis</h2>
