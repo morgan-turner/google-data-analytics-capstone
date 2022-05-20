@@ -1,4 +1,4 @@
-########## IMPORT AND AGGREGATION ##########################
+###################### IMPORT AND AGGREGATION ########################
 
 # For this project, I loaded data into RStudio in order to clean and analyze it using R.
 # First, I installed the tidyverse package and loaded relevant libraries:
@@ -85,7 +85,7 @@ dim(all_trips)
 str(all_trips) 
 summary(all_trips)
 
-################ DATA CLEANING #######################
+####################### DATA CLEANING #######################
 
 # First we'll inspect and clean columns to make sure they only have specific values. 
 # Let's look at the member_casual column:
@@ -137,6 +137,11 @@ all_trips_clean_v3
 
 ###################### ANALYSIS ######################
 
+# Let's start with a descriptive analysis and see what R returns. Times are currently in HH:MM
+mean(all_trips_clean_v3$ride_length) #straight average (total ride length / rides)
+median(all_trips_clean_v3$ride_length) #midpoint number in the ascending array of ride lengths
+max(all_trips_clean_v3$ride_length) #longest ride
+min(all_trips_clean_v3$ride_length) #shortest ride
 
 
 
