@@ -1,10 +1,10 @@
+########## IMPORT AND AGGREGATION ##########################
+
 # For this project, I loaded data into RStudio in order to clean and analyze it using R.
 # First, I installed the tidyverse package and loaded relevant libraries:
 
 install.packages("tidyverse")
 library(tidyverse)
-library(lubridate)
-library(ggplot2)
 
 # Then, I loaded and aggregated the 12 separate .csv files so that these data were accessible and organized. 
 # First, uploading the files to RStudio using readr library...
@@ -85,7 +85,8 @@ dim(all_trips)
 str(all_trips) 
 summary(all_trips)
 
-##### DATA CLEANING 
+################ DATA CLEANING #######################
+
 # First we'll inspect and clean columns to make sure they only have specific values. 
 # Let's look at the member_casual column:
 
@@ -134,7 +135,18 @@ all_trips_clean_v3
 # Success! We dropped 1689 rows, or 0.029% of the dataset and no rides should be less than 3 minutes in length.
 # The data should be good to go for analysis!
 
-###### ANALYSIS
+###################### ANALYSIS ######################
+
+
+
+
+
+
+
+
+
+
+
 
 
 
