@@ -91,28 +91,56 @@ summary(all_trips)
 
 table(all_trips$member_casual)
 
-# This column has 2,546,542 casual riders and 3,176,990 Cyclistic members, suggesting that more than half of Cyclistic users are already members. There are no unexpected values here.
+# member_casual has 2,546,542 casual riders and 3,176,990 Cyclistic members, suggesting that more than half of Cyclistic users are already members. There are no unexpected values here.
+# Need to change the data types of dates, the started_at and ended_at columns are currently stored as characters. 
+# First let's duplicate the table. We can double check for duplicates here using the distinct function in dplyr.
 
-^^^^^^WORKING HERE^^^^^^^^^^^
+library(dplyr)
+all_trips_clean <- distinct(all_trips)
+all_trips_clean
 
-# The started_at and ended_at columns are currently stored as character data types. 
+# Great, the data is definitely free of duplicate rows and now we have a copy
 # Let's convert strings to datetime using lubridate in the format mdy_hm, since times are formatted as HH:MM.
 
-df$started_at <- mdy_hm(df$started_at)
-df$ended_at <- mdy_hm(df$ended_at)
+library(lubridate)
+all_trips_clean$started_at <- mdy_hm(all_trips_clean$started_at)
+all_trips_clean$ended_at <- mdy_hm(all_trips_clean$ended_at)
+all_trips_clean
 
-# Lubridate assumes UTC timezone
+# Just checking that the data type was successfully changed in the last line, looks good. FYI lubridate assumes UTC timezone
+# Now we'll make new columns so that we can see patterns in ride frequency across days, months, and years.
 
-make new columns so that we can see patterns in ride frequency across days, months, and years.
+all_trips_clean$date <- as.Date(all_trips_clean$started_at) 
+all_trips_clean$month <- format(as.Date(all_trips_clean$date), "%m")
+all_trips_clean$day <- format(as.Date(all_trips_clean$date), "%d")
+all_trips_clean$year <- format(as.Date(all_trips_clean$date), "%Y")
 
+# Let's get a look at that table. We should have 4 new columns.
 
+str(all_trips_clean)
 
-# Clean ride_length column for rides less than 3 minutes in length. R already recognizes it as a numeric data type in hms format
-# We'll make a new version of the dataframe since data is being removed here
+# Great!
+# Clean ride_length column for rides negative time in length. R already recognizes it as a numeric data type in hms format
+# We'll make another new version of the dataframe since data is being removed here
 
-all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length<0),]
+all_trips_clean_v2 <- all_trips_clean[!(all_trips_clean$start_station_name == "HQ QR" | all_trips_clean$ride_length<0),]
+all_trips_clean_v2
 
-# Add columns for month/day/year of ride
+# This did not drop any rows. Hmm. We'll try again and see if we can drop by 00:03. We don't need to remove the HQ station name again. 
+
+all_trips_clean_v3 <- all_trips_clean_v2[!(all_trips_clean_v2$ride_length<00:03),]
+all_trips_clean_v3
+
+# Success! We dropped 1689 rows, or 0.029% of the dataset and no rides should be less than 3 minutes in length.
+# The data should be good to go for analysis!
 
 ###### ANALYSIS
+
+
+
+
+
+
+
+
 
