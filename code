@@ -85,7 +85,34 @@ dim(all_trips)
 str(all_trips) 
 summary(all_trips)
 
-# Now the data needs to be cleaned
+##### DATA CLEANING 
+# First we'll inspect and clean columns to make sure they only have specific values. 
+# Let's look at the member_casual column:
+
+table(all_trips$member_casual)
+
+# This column has 2,546,542 casual riders and 3,176,990 Cyclistic members, suggesting that more than half of Cyclistic users are already members. There are no unexpected values here.
+
+^^^^^^WORKING HERE^^^^^^^^^^^
+
+# The started_at and ended_at columns are currently stored as character data types. 
+# Let's convert strings to datetime using lubridate in the format mdy_hm, since times are formatted as HH:MM.
+
+df$started_at <- mdy_hm(df$started_at)
+df$ended_at <- mdy_hm(df$ended_at)
+
+# Lubridate assumes UTC timezone
+
+make new columns so that we can see patterns in ride frequency across days, months, and years.
 
 
+
+# Clean ride_length column for rides less than 3 minutes in length. R already recognizes it as a numeric data type in hms format
+# We'll make a new version of the dataframe since data is being removed here
+
+all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length<0),]
+
+# Add columns for month/day/year of ride
+
+###### ANALYSIS
 
