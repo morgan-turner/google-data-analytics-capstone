@@ -31,7 +31,7 @@ Data was subsequently cleaned for nulls and duplicates, which were dropped from 
 
 <h2>Analysis</h2>
 
-Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Cyclistic members have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. 
+Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Cyclistic members appear to have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. 
 
 ![average_daily_rides_2](https://user-images.githubusercontent.com/92185928/169714994-b5e23779-3e53-46fb-9870-a95062853c2f.png)
 
