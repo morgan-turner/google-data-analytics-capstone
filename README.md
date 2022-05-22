@@ -34,7 +34,7 @@ Data was subsequently cleaned for nulls and duplicates, which were dropped from 
 
 Words words words words
 
-![average daily rides](https://user-images.githubusercontent.com/92185928/169714703-899c68cc-f300-4c35-a42d-3d0ba7247473.png)
+![average_daily_rides_2](https://user-images.githubusercontent.com/92185928/169714994-b5e23779-3e53-46fb-9870-a95062853c2f.png)
 
 <h2>Discussion</h2>
 [supporting visualizations & key findings]
