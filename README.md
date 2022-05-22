@@ -29,7 +29,7 @@ First, each .csv file was edited to calculate a field for ride length and day of
 <br><br>
 Data was subsequently cleaned for nulls and duplicates, which were dropped from the dataset to avoid calculation errors during analysis. This dataset is nearly 6 million rows, and included enough incomplete data that just over 1 million rows containing null values were removed. The remaining data consists of 4,463,485 complete observations.
 
-<h2>Analysis</h2>
+<h2>Analysis & Discussion</h2>
 
 According to data collected since April 2021, the Cyclistic rider pool is dominated by Cyclistic members, with 2,464,757 members versus only 1,998,728 casual riders active in the last year. Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Members appear to have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. 
 
@@ -39,7 +39,7 @@ These useage patterns might indicate that Cylistic members tend to use bikes on 
 
 ![Average Ride Length](https://user-images.githubusercontent.com/92185928/169716250-8d90b613-d41e-49e2-8c7f-200f2ae05e20.png)
 
-Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from other locations or have limited experience with bicycles. 
+Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from outside of Chicago and lack native locational knowledge. 
 
 <h2>Discussion</h2>
 [supporting visualizations & key findings]
