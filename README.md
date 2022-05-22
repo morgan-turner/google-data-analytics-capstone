@@ -39,7 +39,7 @@ These useage patterns might indicate that Cylistic members tend to use bikes on 
 
 ![Average Ride Length](https://user-images.githubusercontent.com/92185928/169716250-8d90b613-d41e-49e2-8c7f-200f2ae05e20.png)
 
-Daily ridership patterns for trip duration reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from other locations or have limited experience with bicycles. 
+Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from other locations or have limited experience with bicycles. 
 
 <h2>Discussion</h2>
 [supporting visualizations & key findings]
