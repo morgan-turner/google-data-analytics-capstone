@@ -6,7 +6,9 @@ This case study is a capstone project for the completion of the Google Data Anal
 <h3>Background</h3>
 Cyclistic is a fictional bike-share company located in Chicago, Illinois. Since its founding in 2016, Cyclistic has grown its fleet to 5,824 geotracked bicycles that dock into 692 Cyclistic stations across the city. Users can undock bikes from a station and return it to any other dock in the Cyclistic network anytime. 
 <br><br>
-Historically, Cyclistic's marketing strategy has relied on appealing to broad consumer segments with general awareness and flexibility in its pricing plans. Currently, users may choose to purchase single-ride passes, full-day passes, or annual memberships. For the purposes of this analysis, customers who purchase single-ride or full-day passes will be considered casual riders. Customers who purchase annual memberships are Cyclistic members. 
+Historically, Cyclistic's marketing strategy has relied on appealing to broad consumer segments with general awareness and flexibility in its pricing plans. Currently, users may choose to purchase single-ride passes, full-day passes, or annual memberships. For the purposes of this analysis, customers who purchase single-ride or full-day passes will be considered casual riders. Customers who purchase annual memberships are Cyclistic members. <br><br>
+
+![cyclistic logo](https://user-images.githubusercontent.com/92185928/169714535-a6594daa-73ca-491b-ab30-ecdd16d82906.png)
 
 <h3>Stakeholder Goals</h3>
 The financial team at Cyclistic has recently concluded that annual members are far more profitable to the company than are casual riders. Subsequently, the marketing team has identified maximizing the number of annual memberships as a key goal for the company's success. They want to design a new marketing strategy to convert casual riders into annual members since individuals in this demographic are already aware of the Cyclistic program and have chosen it at some point for their transportation needs in the past. 
@@ -29,6 +31,10 @@ Data was subsequently cleaned for nulls and duplicates, which were dropped from 
 
 <h2>Analysis</h2>
 [summary of analysis]
+
+Words words words words
+
+![average daily rides](https://user-images.githubusercontent.com/92185928/169714703-899c68cc-f300-4c35-a42d-3d0ba7247473.png)
 
 <h2>Discussion</h2>
 [supporting visualizations & key findings]
