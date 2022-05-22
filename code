@@ -255,6 +255,32 @@ View(all_trips_clean_v5)
 aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual + all_trips_clean_v5$day_of_week, FUN = mean)
 
 # Ok... now it works
+# Tried a plot and had an unexpected column of NAs, cleaning now with dplyr
+
+library(dplyr)
+all_trips_clean_v5 <- all_trips_clean_v5 %>% filter_all(all_vars(complete.cases(.)))  
+
+# This cleaned out about 1.06 million rows of data with any NA field
+# Visualize number of rides by rider type 
+
+all_trips_clean_v5 %>% 
+  mutate(weekday = wday(started_at, label = TRUE)) %>% 
+  group_by(member_casual, weekday) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(duration_seconds)) %>% 
+  arrange(member_casual, weekday)  %>% 
+  ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  labs(title="Average Daily Rides", subtitle="Members vs Casual Riders") +
+  scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
+  
+  
+#Aggregations again with reduced data
+
+aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual, FUN = mean)
+aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual, FUN = median)
+aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual, FUN = max)
+aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual, FUN = min)
 
 
 
