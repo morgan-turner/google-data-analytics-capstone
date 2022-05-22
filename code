@@ -155,7 +155,7 @@ is.numeric(all_trips_clean_v3$duration_seconds)
 
 str(all_trips_clean_v3)
 
-# Great now we have trip duration in seconds. That was annoying.
+# Great now we have trip duration in seconds.
 # On to descriptive stats...
 
 mean(all_trips_clean_v3$duration_seconds) #straight average (total ride length / rides)
@@ -223,7 +223,6 @@ View(trips_2021_04)
 ###################### ANALYSIS ######################
 
 # Comparing members and casual riders using the new duration_seconds column for aggregations
-
 aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = mean)
 aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = median)
 aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = max)
@@ -233,6 +232,29 @@ aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual
 # Casual riders are using the bikes for longer periods of time
 # How does this translate to frequency of bike use?
 
+# Various errors occured from using the other Excel column, day_of_week, so another version of the data was made and day_of_week and ride_length columns removed, day_of_week added back in using R.
+# Here is that code:
+
+# Okay let's try starting a better table from a previous iteration
+all_trips_clean_v5 <- all_trips_clean_v3[!(all_trips_clean_v3$duration_seconds<180),]
+
+# Remove ride_length
+all_trips_clean_v5 <- all_trips_clean_v5 %>%  
+  select(-c(ride_length))
+
+#Remove day_of_week
+all_trips_clean_v5 <- all_trips_clean_v5 %>%  
+  select(-c(day_of_week))
+
+#Add day_of_week back using R
+all_trips_clean_v5$day_of_week <- format(as.Date(all_trips_clean_v5$date), "%A")
+View(all_trips_clean_v5)
+
+# Run average tide time by member status per day
+
+aggregate(all_trips_clean_v5$duration_seconds ~ all_trips_clean_v5$member_casual + all_trips_clean_v5$day_of_week, FUN = mean)
+
+# Ok... now it works
 
 
 
