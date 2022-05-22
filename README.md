@@ -27,12 +27,11 @@ One limitation to this case study is that Cyclistic's user privacy policy preven
 <h3>Data Preparation</h3>
 First, each .csv file was edited to calculate a field for ride length and day of week for each ride using Excel functions. Then, the files were loaded into RStudio, aggregated, and examined with the tidyverse package. Since locational data for individual users is unavailable for analysis, geographic data (latitude and longitude) is unnecessary; this was dropped from the dataset. Additionally, Cyclistic often undocks its bikes for quality control or maintainance; to account for this, any rides less than 3 minutes in length were also dropped from the dataset. This removed 3.39% of the dataset.
 <br><br>
-Data was subsequently cleaned for nulls and duplicates, which were dropped from the dataset to avoid calculation errors during analysis. This dataset is nearly 6 million rows, and included enough incomplete data that just over 1 million rows containing null values were removed. The remaining data is 4,463,485 observations.
+Data was subsequently cleaned for nulls and duplicates, which were dropped from the dataset to avoid calculation errors during analysis. This dataset is nearly 6 million rows, and included enough incomplete data that just over 1 million rows containing null values were removed. The remaining data consists of 4,463,485 complete observations.
 
 <h2>Analysis</h2>
-[summary of analysis]
 
-Words words words words
+Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Cyclistic members have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. These useage patterns might indicate that Cyslistic members tend to use bikes are part of their daily work commute wheareas casual riders may be more interested in using bikes for recreational purposes on weekend days. 
 
 ![average_daily_rides_2](https://user-images.githubusercontent.com/92185928/169714994-b5e23779-3e53-46fb-9870-a95062853c2f.png)
 
