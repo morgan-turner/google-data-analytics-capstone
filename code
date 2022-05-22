@@ -132,22 +132,106 @@ all_trips_clean_v2
 all_trips_clean_v3 <- all_trips_clean_v2[!(all_trips_clean_v2$ride_length<00:03),]
 all_trips_clean_v3
 
-# Success! We dropped 1689 rows, or 0.029% of the dataset and no rides should be less than 3 minutes in length.
+# Okay, we dropped 1689 rows, or 0.029% of the dataset and no rides should be less than 3 minutes in length.
 # The data should be good to go for analysis!
 
-###################### ANALYSIS ######################
-
 # Let's start with a descriptive analysis and see what R returns. Times are currently in HH:MM
+
 mean(all_trips_clean_v3$ride_length) #straight average (total ride length / rides)
 median(all_trips_clean_v3$ride_length) #midpoint number in the ascending array of ride lengths
 max(all_trips_clean_v3$ride_length) #longest ride
 min(all_trips_clean_v3$ride_length) #shortest ride
 
+# Shortest ride is coming up as 0 seconds, which means something went wrong in our ride_length cleaning
+# I decided to make a new column for ride duration with a calculation using start_time and end_time
 
+all_trips_clean_v3$duration_seconds <- difftime(all_trips_clean_v3$ended_at,all_trips_clean_v3$started_at)
 
+# Make this numeric so the calculations work
 
+is.factor(all_trips_clean_v3$duration_seconds)
+all_trips_clean_v3$duration_seconds <- as.numeric(as.character(all_trips_clean_v3$duration_seconds))
+is.numeric(all_trips_clean_v3$duration_seconds)
 
+str(all_trips_clean_v3)
 
+# Great now we have trip duration in seconds. That was annoying.
+# On to descriptive stats...
+
+mean(all_trips_clean_v3$duration_seconds) #straight average (total ride length / rides)
+median(all_trips_clean_v3$duration_seconds) #midpoint number in the ascending array of ride lengths
+max(all_trips_clean_v3$duration_seconds) #longest ride
+min(all_trips_clean_v3$duration_seconds) #shortest ride
+
+View(all_trips_clean_v3)
+
+# Okay! So the duration column blew off the seconds part of the HHMMSS data AND we still can't do calculations with it
+
+aggregate(all_trips_clean_v3$ride_length ~ all_trips_clean_v3$member_casual, FUN = mean)
+aggregate(all_trips_clean_v3$ride_length ~ all_trips_clean_v3$member_casual, FUN = median)
+aggregate(all_trips_clean_v3$ride_length ~ all_trips_clean_v3$member_casual, FUN = max)
+aggregate(all_trips_clean_v3$ride_length ~ all_trips_clean_v3$member_casual, FUN = min)
+
+# Very strange that min being returned is zero seconds. 
+# The data shouldn't have any trips less than 3 minutes
+# Let's try the duration column
+
+aggregate(all_trips_clean_v3$duration_seconds ~ all_trips_clean_v3$member_casual, FUN = mean)
+aggregate(all_trips_clean_v3$duration_seconds ~ all_trips_clean_v3$member_casual, FUN = median)
+aggregate(all_trips_clean_v3$duration_seconds ~ all_trips_clean_v3$member_casual, FUN = max)
+aggregate(all_trips_clean_v3$duration_seconds ~ all_trips_clean_v3$member_casual, FUN = min)
+
+# Ok let's sort the dataset by the duration_seconds column and see what's up
+
+sorted_by_duration <- all_trips_clean_v3[order(all_trips_clean_v3$duration_seconds),]
+View(sorted_by_duration)
+
+# Okay we have a bunch of unwanted trip duration lengths. Let's try to drop by 00:03:00
+
+all_trips_clean_v4 <- all_trips_clean_v3[!(all_trips_clean_v3$duration_seconds<180),]
+all_trips_clean_v4
+
+# Okay let's try again. This removed 3.39% of the dataset. 
+
+rm(sorted_by_duration)
+
+sorted_by_duration <- all_trips_clean_v4[order(all_trips_clean_v4$duration_seconds),]
+View(sorted_by_duration)
+
+# Aggregations again
+
+aggregate(all_trips_clean_v4$ride_length ~ all_trips_clean_v4$member_casual, FUN = mean)
+aggregate(all_trips_clean_v4$ride_length ~ all_trips_clean_v4$member_casual, FUN = median)
+aggregate(all_trips_clean_v4$ride_length ~ all_trips_clean_v4$member_casual, FUN = max)
+aggregate(all_trips_clean_v4$ride_length ~ all_trips_clean_v4$member_casual, FUN = min)
+
+# Let's try the duration column
+
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = mean)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = median)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = max)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = min)
+
+# Somewhere along the way, the seconds portion of the datetime column started_at and ended_at disappeared
+# Let's look at the original data and see if it's there
+
+View(trips_2021_04)
+
+# No seconds in these columns! Not sure what happened in Excel that the ride_length column came out in HH:MM:SS with anything besides 00 in seconds
+# We'll continue without this column and use duration_seconds for calculations instead
+
+###################### ANALYSIS ######################
+
+# Comparing members and casual riders using the new duration_seconds column for aggregations
+
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = mean)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = median)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = max)
+aggregate(all_trips_clean_v4$duration_seconds ~ all_trips_clean_v4$member_casual, FUN = min)
+
+# Looks like even though we know there are more Cyslistic members in the user pool than casual riders,
+# Casual riders are using the bikes for longer periods of time
+# How does this translate to frequency of bike use?
 
 
 
