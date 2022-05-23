@@ -261,6 +261,7 @@ library(dplyr)
 all_trips_clean_v5 <- all_trips_clean_v5 %>% filter_all(all_vars(complete.cases(.)))  
 
 # This cleaned out about 1.06 million rows of data with any NA field
+
 # Visualize number of rides by rider type 
 all_trips_clean_v5 %>% 
   mutate(weekday = wday(started_at, label = TRUE)) %>% 
@@ -295,7 +296,11 @@ all_trips_clean_v5 %>%
   labs(title="Average Ride Length", subtitle="Members vs Casual Riders") +
   scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
 
-
+#Average rides by month plot
+ggplot(data = all_trips_clean_v5) +
+  geom_bar(mapping = aes(x = month, fill = member_casual), position = "stack") +
+  labs(title="Seasonal Ridership Trends", subtitle="Members vs Casual Riders") +
+  scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) 
 
 
 
