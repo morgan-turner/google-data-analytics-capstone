@@ -1,7 +1,9 @@
 # Cyclistic Case Study: Can We Convert Casual Riders Into Members?
 
 <h2>Introduction</h2>
-This case study is a capstone project for the completion of the Google Data Analytics Professional Certificate.
+This case study is a capstone project for the completion of the Google Data Analytics Professional Certificate. 
+
+It uses [publicly available data](https://divvy-tripdata.s3.amazonaws.com/index.html) under [this license agreement](https://ride.divvybikes.com/data-license-agreement). 
 
 <h3>Background</h3>
 Cyclistic is a fictional bike-share company located in Chicago, Illinois. Since its founding in 2016, Cyclistic has grown its fleet to 5,824 geotracked bicycles that dock into 692 Cyclistic stations across the city. Users can undock bikes from a station and return it to any other dock in the Cyclistic network anytime. 
