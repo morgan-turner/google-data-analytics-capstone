@@ -43,7 +43,7 @@ Daily ridership patterns for trip duration (in seconds) reflect that members ten
 
 Observations of ridership trends throughout the year indicate a seasonal pattern in Cyclistic bike useage. It is more common for both members and casual riders to choose to ride in the summer months, when the weather is nice and the days are long. 
 
-![seasonal ridership trends](https://user-images.githubusercontent.com/92185928/169732696-1f7668cc-f85b-4906-9f67-95d89805f647.png)
+![seasonal](https://user-images.githubusercontent.com/92185928/169734139-1c290cc6-bff2-44c1-8b10-3311528d1964.png)
 
 In fact, summertime riding is so popular that during the months of July and August there are actually more casual riders using Cyclistic bikes than there are members using the bikes, indicating that July through August is an ideal time to convert casual riders to members. 
 
