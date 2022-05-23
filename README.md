@@ -61,7 +61,7 @@ While the data team did not explicitly investigate the question of "Why would ca
 - Perhaps a casual rider might be enticed by a money-back guarantee that start stations will always have a bike available to them
 - It might be helpful to continue building the fleet and advertise that Cyclistic is expanding
 
-Additionally, seasonal ridership data can help the marketing team understand "How can Cyclistic use digital media to influence casual riders to become members?"
+Additionally, seasonal ridership data can help the marketing team understand "How can Cyclistic use digital media to influence casual riders to become members?":
 - Riders clearly enjoy being outside during Chicago summers, as these are peak ridership months for Cyclistic riders
 - Making membership more attractive in the months when riders are most likely to choose to use a Cyclistic bike could help convert casual riders to members
 
