@@ -33,17 +33,17 @@ Data was subsequently cleaned for nulls and duplicates, which were dropped from 
 
 According to data collected since April 2021, the Cyclistic rider pool is dominated by Cyclistic members, with 2,464,757 members versus only 1,998,728 casual riders active in the last year. Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Members appear to have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. 
 
-![average_daily_rides_2](https://user-images.githubusercontent.com/92185928/169714994-b5e23779-3e53-46fb-9870-a95062853c2f.png)
+![Av Daily Rides 3](https://user-images.githubusercontent.com/92185928/169889617-e43f13e1-bb7f-4a91-9bf4-923f869b059f.png)
 
 These useage patterns might indicate that Cylistic members tend to use bikes on a daily basis as part of their work and errand commutes wheareas casual riders may be more interested in using bikes for recreational purposes on weekend days. In addition, casual riders tend to spend more time on average riding the bikes then do Cyclistic members, suggesting that members use bikes primarily for point-to-point transportation and less for leisure or exploration. The average trip taken by a casual rider lasts 1778 seconds, or about 30 minutes, whereas the average trip taken by a Cyclistic member lasts 814 seconds, or about 14 minutes.
 
-![Average Ride Length](https://user-images.githubusercontent.com/92185928/169716250-8d90b613-d41e-49e2-8c7f-200f2ae05e20.png)
+![Av Ride Length 2](https://user-images.githubusercontent.com/92185928/169889692-413787e3-b324-460c-9c0f-86b797956d10.png)
 
 Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from outside of Chicago and lack native locational knowledge. 
 
 Observations of ridership trends throughout the year indicate a seasonal pattern in Cyclistic bike useage. It is more common for both members and casual riders to choose to ride in the summer months, when the weather is nice and the days are long. 
 
-![monthly trends 2](https://user-images.githubusercontent.com/92185928/169888120-4ffa0824-6423-4715-bc43-77b683d67617.png)
+![Monthly Trends 3](https://user-images.githubusercontent.com/92185928/169889193-2fcffe57-69c7-47db-a711-a60a2d5b427a.png)
 
 In fact, summertime riding is so popular that during the months of June, July, and August there are actually more casual riders using Cyclistic bikes than there are members using the bikes, indicating that June through August is an ideal time to convert casual riders to members. 
 
