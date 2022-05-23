@@ -271,7 +271,7 @@ all_trips_clean_v5 %>%
   arrange(member_casual, weekday)  %>% 
   ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
   geom_col(position = "dodge") +
-  labs(title="Average Daily Rides", subtitle="Members vs Casual Riders") +
+  labs(title="Average Daily Rides", subtitle="Members vs Casual Riders", fill = "Rider Type") +
   scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
   
 #Aggregations again with reduced data
@@ -293,13 +293,13 @@ all_trips_clean_v5 %>%
   arrange(member_casual, weekday)  %>% 
   ggplot(aes(x = weekday, y = average_duration, fill = member_casual)) +
   geom_col(position = "dodge") +
-  labs(title="Average Ride Length", subtitle="Members vs Casual Riders") +
+  labs(title="Average Ride Length", subtitle="Members vs Casual Riders", fill = "Rider Type") +
   scale_y_continuous(labels = function(x) format(x, scientific = FALSE))
 
 #Average rides by month plot
 ggplot(data = all_trips_clean_v5) +
-  geom_bar(mapping = aes(x = month, fill = member_casual), position = "stack") +
-  labs(title="Seasonal Ridership Trends", subtitle="Members vs Casual Riders") +
+  geom_bar(mapping = aes(x = month, fill = member_casual), position = "dodge") +
+  labs(title="Monthly Ridership Trends", subtitle="Members vs Casual Riders", fill = "Rider Type") +
   scale_y_continuous(labels = function(x) format(x, scientific = FALSE)) 
 
 
