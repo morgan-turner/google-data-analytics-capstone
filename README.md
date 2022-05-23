@@ -39,7 +39,7 @@ These useage patterns might indicate that Cylistic members tend to use bikes on 
 
 ![Av Ride Length 2](https://user-images.githubusercontent.com/92185928/169889692-413787e3-b324-460c-9c0f-86b797956d10.png)
 
-Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from outside of Chicago and lack native locational knowledge. 
+The above chart of daily ridership patterns for trip duration (in seconds) reflects that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from outside of Chicago and lack native locational knowledge. 
 
 Observations of ridership trends throughout the year indicate a seasonal pattern in Cyclistic bike useage. It is more common for both members and casual riders to choose to ride in the summer months, when the weather is nice and the days are long. 
 
