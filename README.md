@@ -57,9 +57,9 @@ Insights from the analysis phase can help the marketing team answer the question
 - Ridership in both categories is dramatically lower in January and February, when there is likely to be snow on the ground in Chicago
 
 While the data team did not explicitly investigate the question of "Why would casual riders buy Cyclistic annual memberships?", we can offer some insights based on the analysis here as well:
-- Casual riders might choose an annual membership if it were more convenient for them to choose this option for daily use
-- Perhaps a casual rider might be enticed by a money-back guarantee that start stations will always have a bike available to them
-- It might be helpful to continue building the fleet and advertise that Cyclistic is expanding
+- Casual riders might choose an annual membership if they decided to use Cyclistic bikes for their daily work commute or to run errands
+- For casual riders who frequently ride on the weekends, membership may be more cost-effective than repeatedly buying single-day passes
+- Casual riders who are offered a membership discount on a day they are already likely to be riding (Saturday) may be more likely to join
 
 Additionally, seasonal ridership data can help the marketing team understand "How can Cyclistic use digital media to influence casual riders to become members?":
 - Riders clearly enjoy being outside during Chicago summers, as these are peak ridership months for Cyclistic riders
@@ -68,6 +68,6 @@ Additionally, seasonal ridership data can help the marketing team understand "Ho
 <h2>Recommendations</h2>
 
 Based on this analysis, the data team would recommend to the marketing team the following, for the purposes of encouraging casual riders to become Cyclistic members:
-1. Offer occasional weekend membership discounts to casual riders, especially during peak times for this demographic in June, July, and August
+1. Offer weekend membership discounts to casual riders, especially during peak times for this demographic in June, July, and August
 2. Run fun, outdoors-centered digital media campaigns in the summer to remind riders that biking is fun, healthy, and environmentally friendly
 3. Run a marketing campaign to tout the wellness benefits and cost efficiency of biking to work, especially in a recession economy where gas is expensive
