@@ -43,9 +43,9 @@ Daily ridership patterns for trip duration (in seconds) reflect that members ten
 
 Observations of ridership trends throughout the year indicate a seasonal pattern in Cyclistic bike useage. It is more common for both members and casual riders to choose to ride in the summer months, when the weather is nice and the days are long. 
 
-![monthly trends](https://user-images.githubusercontent.com/92185928/169885121-4cb95532-3176-41c6-beb7-a27df2ca0a7d.png)
+![monthly trends 2](https://user-images.githubusercontent.com/92185928/169888120-4ffa0824-6423-4715-bc43-77b683d67617.png)
 
-In fact, summertime riding is so popular that during the months of July and August there are actually more casual riders using Cyclistic bikes than there are members using the bikes, indicating that July through August is an ideal time to convert casual riders to members. 
+In fact, summertime riding is so popular that during the months of June, July, and August there are actually more casual riders using Cyclistic bikes than there are members using the bikes, indicating that June through August is an ideal time to convert casual riders to members. 
 
 <h2>Discussion</h2>
 
@@ -68,6 +68,6 @@ Additionally, seasonal ridership data can help the marketing team understand "Ho
 <h2>Recommendations</h2>
 
 Based on this analysis, the data team would recommend to the marketing team the following, for the purposes of encouraging casual riders to become Cyclistic members:
-1. Offer occasional weekend membership discounts to casual riders, especially in July and August
+1. Offer occasional weekend membership discounts to casual riders, especially during peak times for this demographic in June, July, and August
 2. Run fun, outdoors-centered digital media campaigns in the summer to remind riders that biking is fun, healthy, and environmentally friendly
 3. Run a marketing campaign to tout the wellness benefits and cost efficiency of biking to work, especially in a recession economy where gas is expensive
