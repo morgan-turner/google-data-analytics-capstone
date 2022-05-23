@@ -29,7 +29,7 @@ First, each .csv file was loaded into RStudio, aggregated, and examined with the
 <br><br>
 Data was subsequently cleaned for nulls and duplicates, which were dropped from the dataset to avoid calculation errors during analysis. This dataset was nearly 6 million rows, and included enough incomplete data that just over 1 million rows containing null values were removed. The remaining data consists of 4,463,485 complete observations.
 
-<h2>Analysis & Discussion</h2>
+<h2>Analysis</h2>
 
 According to data collected since April 2021, the Cyclistic rider pool is dominated by Cyclistic members, with 2,464,757 members versus only 1,998,728 casual riders active in the last year. Analysis of daily ridership reveals inverse useage patterns between Cyclistic members and casual riders. Members appear to have higher average ridership on weekdays, with peak rides occuring on Wednesdays. Conversely, casual riders appear to have a higher average ridership on weekends, with peak rides occurring on Saturdays. 
 
@@ -41,8 +41,31 @@ These useage patterns might indicate that Cylistic members tend to use bikes on 
 
 Daily ridership patterns for trip duration (in seconds) reflect that members tend to use Cyclistic bikes very intentionally, perhaps with high awareness of where Cyclistic docks are located as well as existing directional knowledge of the city layout for short ride times. In addition to the likelihood of casual riders looking to bike on the weekends for leisure, it is possible that some casual riders are visiting from outside of Chicago and lack native locational knowledge. 
 
+Observations of ridership trends throughout the year indicate a seasonal pattern in Cyclistic bike useage. It is more common for both members and casual riders to choose to ride in the summer months, when the weather is nice and the days are long. 
+
+
+
 <h2>Discussion</h2>
-[supporting visualizations & key findings]
+
+Insights from the analysis phase can help the marketing team answer the questions they have identified as the core of their program going forward. The data team can now provide an answer to the first question, "How do annual members and casual riders use Cyclistic differently?":
+- Members are more likely to ride on weekdays, whereas casual riders are more likely to ride on weekends
+- Members demonstrate peak useage overall on Wednesdays, and casual riders demonstrate peak useage on Saturdays
+- Casual riders are more likely to take long-duration rides; members average about half the ride length of casual riders overall
+- Both members and casual riders are more likely to ride in the summer months, with July being the most popular time to use a Cyclistic bike
+- Ridership in both categories is dramatically lower in January and February, when there is likely to be snow on the ground in Chicago
+
+While the data team did not explicitly investigate the question of "Why would casual riders buy Cyclistic annual memberships?", we can offer some insights based on the analysis here as well:
+- Casual riders might choose an annual membership if it were more convenient for them to choose this option for daily use
+- Perhaps a casual rider might be enticed by a money-back guarantee that start stations will always have a bike available to them
+- It might be helpful to continue building the fleet and advertise that Cyclistic is expanding
+
+Additionally, seasonal ridership data can help the marketing team understand "How can Cyclistic use digital media to influence casual riders to become members?"
+- Riders clearly enjoy being outside during Chicago summers, as these are peak ridership months for Cyclistic riders
+- Making membership more attractive in the months when riders are most likely to choose to use a Cyclistic bike could help convert casual riders to members
 
 <h2>Recommendations</h2>
-[top 3 recommendations based on analysis]
+
+Based on this analysis, the data team would recommend to the marketing team the following, for the purposes of encouraging casual riders to become Cyclistic members:
+1. Offer weekend membership discounts to casual riders, especially in the summertime
+2. Run fun, outdoors-centered digital media campaigns in the summer to remind riders that biking is fun, healthy, and environmentally friendly
+3. Run a marketing campaign to tout the wellness benefits of biking to work
