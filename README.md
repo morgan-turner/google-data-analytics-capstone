@@ -60,7 +60,7 @@ Insights from the analysis phase can help the marketing team answer the question
 
 While the data team did not explicitly investigate the question of "Why would casual riders buy Cyclistic annual memberships?", we can offer some insights based on the analysis here as well:
 - Casual riders might choose an annual membership if they decided to use Cyclistic bikes for their daily work commute or to run errands
-- For casual riders who frequently ride on the weekends, membership may be more cost-effective than repeatedly buying single-day passes
+- For casual riders who frequently ride on the weekends, membership ($9/month) may be more cost-effective than repeatedly buying single-day passes ($15/day)
 - Casual riders who are offered a membership discount on a day they are already likely to be riding (Saturday) may be more likely to join
 
 Additionally, seasonal ridership data can help the marketing team understand "How can Cyclistic use digital media to influence casual riders to become members?":
